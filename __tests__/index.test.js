@@ -1,5 +1,10 @@
-import sum from '../src';
+import binarySearch from '../src';
 
-test('adds 1 + 2 to equal 3', () => {
-  expect(sum(1, 2)).toBe(3);
+test('find element\'s index', () => {
+  const list = [1, 2, 6, 7, 8, 9, 10];
+  const list2 = ['a', 'b', 'c', 'd', 'e', 'f', 'j', 'h'];
+
+  expect(binarySearch(list, 7)).toBe(3);
+  expect(binarySearch(list2, 'e')).toBe(4);
+  expect(binarySearch(list2, 'z')).toBe(null);
 });
